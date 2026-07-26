@@ -1,0 +1,138 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Pretendard', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 450px;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  padding-bottom: 80px; /* nav bar space */
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  background: #fff;
+  border-top: 1px solid #eee;
+  height: 60px;
+}
+
+.bottom-nav button {
+  flex: 1;
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.bottom-nav button.active {
+  color: #4CAF50;
+  border-top: 3px solid #4CAF50;
+}
+
+/* Common UI */
+.card {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+button.btn {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+}
+button.btn:disabled {
+  background: #ccc;
+}
+button.btn.stop {
+  background: #f44336;
+}
+
+input[type="number"], select, input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 5px 0;
+  width: 100%;
+  font-size: 1rem;
+}
+
+/* Todo List */
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.todo-item input[type="checkbox"] {
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+}
+.todo-item span {
+  flex: 1;
+  transition: all 0.3s;
+}
+.todo-item.done span {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+/* Character Display */
+.char-display {
+  font-size: 5rem;
+  margin: 20px 0;
+  transition: transform 0.2s;
+}
+.timer-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  letter-spacing: 2px;
+  margin: 15px 0;
+}
